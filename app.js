@@ -107,26 +107,7 @@ client.on("message", async message => {
  };
 
   
-      if(command === 'player') {
-  
-  var sq = new SourceQuery(1000); // 1000ms timeout
-sq.open('208.103.169.45', 27018);
- 
 
-
- 
-sq.getPlayers(function(err, players){
-    let myembed = new Discord.RichEmbed ()
-	.setTitle("Players Currently Online:")
-	.setAuthor("SoS AI", "https://imgur.com/OZrgWQH.jpg")
-    .setColor('RANDOM')
-    .setDescription("test")
-    .setFooter("AI made by Kamuji", "https://imgur.com/IqcgMgl.png")
-    .setThumbnail("https://imgur.com/wqEDDsX.png")
-     message.channel.send(myembed)
-});
- 
- };
 
 
 
