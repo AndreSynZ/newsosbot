@@ -38,7 +38,7 @@ const activities_list = [
     "with Arbiter | =help",
     "with Unggoys | =help",
     "with Kamuji | =help",
-    "with Striker | =help",
+    "with Striker | =help"
     ]; // creates an arraylist containing phrases you want your bot to switch through.
 
 client.on('ready', () => {
