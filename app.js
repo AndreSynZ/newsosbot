@@ -13,7 +13,7 @@ const token = process.env.token;
 const config = require("./config.json");
 // config.token contains the bot's token
 // config.prefix contains the message prefix.
-const PREFIX = "-" // bot's prefix
+const PREFIX = "=" // bot's prefix
 
 
 var SourceQuery = require('sourcequery');
@@ -35,10 +35,10 @@ var eightball = [ // sets the answers to an eightball
 const fs = require('fs');
 
 const activities_list = [
-    "with Arbiter | .help",
-    "with Unggoys | .help",
-    "with Kamuji | .help",
-    "with Striker | .help",
+    "with Arbiter | =help",
+    "with Unggoys | =help",
+    "with Kamuji | =help",
+    "with Striker | =help",
     ]; // creates an arraylist containing phrases you want your bot to switch through.
 
 client.on('ready', () => {
@@ -99,7 +99,7 @@ client.on("message", async message => {
     .setAuthor("SoS AI", "https://imgur.com/OZrgWQH.jpg")
     .setColor('RANDOM')
     .setDescription('This is information about the AI and the Discord Server!')
-    .addField(":robot: __SoS AI:__", 'In order to see the commands avaliable, type `.help`! ', true)
+    .addField(":robot: __SoS AI:__", 'In order to see the commands avaliable, type `=help`! ', true)
     .addField(':dog: __Discord Server:__', 'If you see any errors within the discord server that needs fixing, message the ``Discord Moderation Team``. ', true)
     .setFooter("Bot made by Kamuji", "https://imgur.com/IqcgMgl.png")
     .setThumbnail("https://imgur.com/wqEDDsX.png")
@@ -120,7 +120,7 @@ sq.getPlayers(function(err, players){
 	.setTitle("Players Currently Online:")
 	.setAuthor("SoS AI", "https://imgur.com/OZrgWQH.jpg")
     .setColor('RANDOM')
-    .setDescription(players.length + "/128")
+    .setDescription(players.length + "/90")
     .setFooter("AI made by Kamuji", "https://imgur.com/IqcgMgl.png")
     .setThumbnail("https://imgur.com/wqEDDsX.png")
      message.channel.send(myembed)
@@ -189,9 +189,9 @@ if (command == "demote") { // creates the command kill
      .setAuthor("SoS AI", "https://imgur.com/OZrgWQH.jpg")
      .setColor('RANDOM')
      .setDescription('These are all the commands that you can currently use on the AI. | ***More will be coming soon!***')
-     .addField(':tools: Moderation:', '`.kick, .ban, .purge` ', true)
-     .addField(':smile: Fun Commands:', '`.cookie, .milk, .8ball, .promote, .demote, .kill` ', true)
-     .addField(':gear: AI/Server:', '`.ping, .info, .ranks, .species, .players` ')
+     .addField(':tools: Moderation:', '`=purge` ', true)
+     .addField(':smile: Fun Commands:', '`=cookie, =milk, =8ball, =promote, =demote, =kill` ', true)
+     .addField(':gear: AI/Server:', '`=ping, =info, =ranks, =species` ')
      .setFooter("AI made by Kamuji", "https://imgur.com/IqcgMgl.png")
      .setThumbnail("https://imgur.com/wqEDDsX.png")
      message.channel.send(myembed)
