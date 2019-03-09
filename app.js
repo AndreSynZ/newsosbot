@@ -107,7 +107,30 @@ client.on("message", async message => {
  };
 
   
+	      if(command === 'players') {
+  
+  var sq = new SourceQuery(1000); // 1000ms timeout
+sq.open('208.103.169.45', 27018);
+ 
 
+
+ 
+sq.getPlayers(function(err, players){
+    let myembed = new Discord.RichEmbed ()
+    let playersString = "";
+    players.forEach(ply => {
+        playersString += ply.name + '\n';
+    })
+    myembed.setTitle("Players Currently Online:")
+    myembed.setAuthor("SoS AI", "https://imgur.com/OZrgWQH.jpg")
+    myembed.setDescription(playersString)
+    myembed.addField('Total Players Online:', players.length + '/100')
+    myembed.setColor('RANDOM')
+    myembed.setFooter("Bot made by Kamuji", "https://imgur.com/IqcgMgl.png")
+    myembed.setThumbnail("https://imgur.com/wqEDDsX.png")
+    myembed.setTimestamp()	
+    message.channel.send(myembed);
+})};
 
 
 
