@@ -126,7 +126,7 @@ sq.getPlayers(function(err, players){
     myembed.setDescription(playersString)
     myembed.addField('Total Players Online:', players.length + '/100')
     myembed.setColor('RANDOM')
-    myembed.setFooter("Bot made by Kamuji", "https://imgur.com/IqcgMgl.png")
+    myembed.setFooter("AI made by Kamuji", "https://imgur.com/IqcgMgl.png")
     myembed.setThumbnail("https://imgur.com/wqEDDsX.png")
     myembed.setTimestamp()	
     message.channel.send(myembed);
