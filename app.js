@@ -195,7 +195,7 @@ if (command == "demote") { // creates the command kill
      .setDescription('These are all the commands that you can currently use on the AI. | ***More will be coming soon!***')
      .addField(':tools: Moderation:', '`=purge` ', true)
      .addField(':smile: Fun Commands:', '`=cookie, =milk, =8ball, =promote, =demote, =kill` ', true)
-     .addField(':gear: AI/Server:', '`=ping, =info, =ranks, =species` ')
+     .addField(':gear: AI/Server:', '`=ping, =info, =ranks, =species, =players` ')
      .setFooter("AI made by Kamuji", "https://imgur.com/IqcgMgl.png")
      .setThumbnail("https://imgur.com/wqEDDsX.png")
      message.channel.send(myembed)
